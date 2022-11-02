@@ -1,0 +1,1188 @@
+[33mcommit 233212ecea02ded018ef6bb15f3ddcb8cce4bf4a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: FFFSanchez <115562380+FFFSanchez@users.noreply.github.com>
+Date:   Wed Nov 2 21:11:13 2022 +0400
+
+    starting dartblog project
+
+[1mdiff --git a/.idea/.gitignore b/.idea/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..26d3352[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/.gitignore[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32m# Default ignored files[m
+[32m+[m[32m/shelf/[m
+[32m+[m[32m/workspace.xml[m
+[1mdiff --git a/.idea/dartblog.iml b/.idea/dartblog.iml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d41f09d[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/dartblog.iml[m
+[36m@@ -0,0 +1,15 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<module type="PYTHON_MODULE" version="4">[m
+[32m+[m[32m  <component name="NewModuleRootManager">[m
+[32m+[m[32m    <content url="file://$MODULE_DIR$">[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/siteblog" isTestSource="false" />[m
+[32m+[m[32m      <excludeFolder url="file://$MODULE_DIR$/venv" />[m
+[32m+[m[32m    </content>[m
+[32m+[m[32m    <orderEntry type="inheritedJdk" />[m
+[32m+[m[32m    <orderEntry type="sourceFolder" forTests="false" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="PyDocumentationSettings">[m
+[32m+[m[32m    <option name="format" value="PLAIN" />[m
+[32m+[m[32m    <option name="myDocStringFormat" value="Plain" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</module>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..105ce2d[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/inspectionProfiles/profiles_settings.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<component name="InspectionProjectProfileManager">[m
+[32m+[m[32m  <settings>[m
+[32m+[m[32m    <option name="USE_PROJECT_PROFILE" value="false" />[m
+[32m+[m[32m    <version value="1.0" />[m
+[32m+[m[32m  </settings>[m
+[32m+[m[32m</component>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/misc.xml b/.idea/misc.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..faa81d4[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/misc.xml[m
+[36m@@ -0,0 +1,7 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (dartblog)" project-jdk-type="Python SDK" />[m
+[32m+[m[32m  <component name="PyCharmProfessionalAdvertiser">[m
+[32m+[m[32m    <option name="shown" value="true" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/modules.xml b/.idea/modules.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0c52bf0[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/modules.xml[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="ProjectModuleManager">[m
+[32m+[m[32m    <modules>[m
+[32m+[m[32m      <module fileurl="file://$PROJECT_DIR$/.idea/dartblog.iml" filepath="$PROJECT_DIR$/.idea/dartblog.iml" />[m
+[32m+[m[32m    </modules>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/siteblog/blog/__init__.py b/siteblog/blog/__init__.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/siteblog/blog/__pycache__/__init__.cpython-310.pyc b/siteblog/blog/__pycache__/__init__.cpython-310.pyc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..57be0e3[m
+Binary files /dev/null and b/siteblog/blog/__pycache__/__init__.cpython-310.pyc differ
+[1mdiff --git a/siteblog/blog/__pycache__/admin.cpython-310.pyc b/siteblog/blog/__pycache__/admin.cpython-310.pyc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3af5ea5[m
+Binary files /dev/null and b/siteblog/blog/__pycache__/admin.cpython-310.pyc differ
+[1mdiff --git a/siteblog/blog/__pycache__/apps.cpython-310.pyc b/siteblog/blog/__pycache__/apps.cpython-310.pyc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1e5e263[m
+Binary files /dev/null and b/siteblog/blog/__pycache__/apps.cpython-310.pyc differ
+[1mdiff --git a/siteblog/blog/__pycache__/models.cpython-310.pyc b/siteblog/blog/__pycache__/models.cpython-310.pyc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..57a982c[m
+Binary files /dev/null and b/siteblog/blog/__pycache__/models.cpython-310.pyc differ
+[1mdiff --git a/siteblog/blog/admin.py b/siteblog/blog/admin.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8c38f3f[m
+[1m--- /dev/null[m
+[1m+++ b/siteblog/blog/admin.py[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32mfrom django.contrib import admin[m
+[32m+[m
+[32m+[m[32m# Register your models here.[m
+[1mdiff --git a/siteblog/blog/apps.py b/siteblog/blog/apps.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..94788a5[m
+[1m--- /dev/null[m
+[1m+++ b/siteblog/blog/apps.py[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32mfrom django.apps import AppConfig[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass BlogConfig(AppConfig):[m
+[32m+[m[32m    default_auto_field = 'django.db.models.BigAutoField'[m
+[32m+[m[32m    name = 'blog'[m
+[1mdiff --git a/siteblog/blog/migrations/__init__.py b/siteblog/blog/migrations/__init__.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/siteblog/blog/migrations/__pycache__/__init__.cpython-310.pyc b/siteblog/blog/migrations/__pycache__/__init__.cpython-310.pyc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6210192[m
+Binary files /dev/null and b/siteblog/blog/migrations/__pycache__/__init__.cpython-310.pyc differ
+[1mdiff --git a/siteblog/blog/models.py b/siteblog/blog/models.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..71a8362[m
+[1m--- /dev/null[m
+[1m+++ b/siteblog/blog/models.py[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32mfrom django.db import models[m
+[32m+[m
+[32m+[m[32m# Create your models here.[m
+[1mdiff --git a/siteblog/blog/tests.py b/siteblog/blog/tests.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7ce503c[m
+[1m--- /dev/null[m
+[1m+++ b/siteblog/blog/tests.py[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32mfrom django.test import TestCase[m
+[32m+[m
+[32m+[m[32m# Create your tests here.[m
+[1mdiff --git a/siteblog/blog/views.py b/siteblog/blog/views.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..91ea44a[m
+[1m--- /dev/null[m
+[1m+++ b/siteblog/blog/views.py[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32mfrom django.shortcuts import render[m
+[32m+[m
+[32m+[m[32m# Create your views here.[m
+[1mdiff --git a/siteblog/db.sqlite3 b/siteblog/db.sqlite3[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/siteblog/manage.py b/siteblog/manage.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..deb6441[m
+[1m--- /dev/null[m
+[1m+++ b/siteblog/manage.py[m
+[36m@@ -0,0 +1,22 @@[m
+[32m+[m[32m#!/usr/bin/env python[m
+[32m+[m[32m"""Django's command-line utility for administrative tasks."""[m
+[32m+[m[32mimport os[m
+[32m+[m[32mimport sys[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef main():[m
+[32m+[m[32m    """Run administrative tasks."""[m
+[32m+[m[32m    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'siteblog.settings')[m
+[32m+[m[32m    try:[m
+[32m+[m[32m        from django.core.management import execute_from_command_line[m
+[32m+[m[32m    except ImportError as exc:[m
+[32m+[m[32m        raise ImportError([m
+[32m+[m[32m            "Couldn't import Django. Are you sure it's installed and "[m
+[32m+[m[32m            "available on your PYTHONPATH environment variable? Did you "[m
+[32m+[m[32m            "forget to activate a virtual environment?"[m
+[32m+[m[32m        ) from exc[m
+[32m+[m[32m    execute_from_command_line(sys.argv)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mif __name__ == '__main__':[m
+[32m+[m[32m    main()[m
+[1mdiff --git a/siteblog/siteblog/__init__.py b/siteblog/siteblog/__init__.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/siteblog/siteblog/__pycache__/__init__.cpython-310.pyc b/siteblog/siteblog/__pycache__/__init__.cpython-310.pyc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3c9edff[m
+Binary files /dev/null and b/siteblog/siteblog/__pycache__/__init__.cpython-310.pyc differ
+[1mdiff --git a/siteblog/siteblog/__pycache__/settings.cpython-310.pyc b/siteblog/siteblog/__pycache__/settings.cpython-310.pyc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0cf274c[m
+Binary files /dev/null and b/siteblog/siteblog/__pycache__/settings.cpython-310.pyc differ
+[1mdiff --git a/siteblog/siteblog/__pycache__/urls.cpython-310.pyc b/siteblog/siteblog/__pycache__/urls.cpython-310.pyc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..cf928e6[m
+Binary files /dev/null and b/siteblog/siteblog/__pycache__/urls.cpython-310.pyc differ
+[1mdiff --git a/siteblog/siteblog/__pycache__/wsgi.cpython-310.pyc b/siteblog/siteblog/__pycache__/wsgi.cpython-310.pyc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..852ee09[m
+Binary files /dev/null and b/siteblog/siteblog/__pycache__/wsgi.cpython-310.pyc differ
+[1mdiff --git a/siteblog/siteblog/asgi.py b/siteblog/siteblog/asgi.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..bed7a80[m
+[1m--- /dev/null[m
+[1m+++ b/siteblog/siteblog/asgi.py[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m"""[m
+[32m+[m[32mASGI config for siteblog project.[m
+[32m+[m
+[32m+[m[32mIt exposes the ASGI callable as a module-level variable named ``application``.[m
+[32m+[m
+[32m+[m[32mFor more information on this file, see[m
+[32m+[m[32mhttps://docs.djangoproject.com/en/4.1/howto/deployment/asgi/[m
+[32m+[m[32m"""[m
+[32m+[m
+[32m+[m[32mimport os[m
+[32m+[m
+[32m+[m[32mfrom django.core.asgi import get_asgi_application[m
+[32m+[m
+[32m+[m[32mos.environ.setdefault('DJANGO_SETTINGS_MODULE', 'siteblog.settings')[m
+[32m+[m
+[32m+[m[32mapplication = get_asgi_application()[m
+[1mdiff --git a/siteblog/siteblog/settings.py b/siteblog/siteblog/settings.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3e92462[m
+[1m--- /dev/null[m
+[1m+++ b/siteblog/siteblog/settings.py[m
+[36m@@ -0,0 +1,124 @@[m
+[32m+[m[32m"""[m
+[32m+[m[32mDjango settings for siteblog project.[m
+[32m+[m
+[32m+[m[32mGenerated by 'django-admin startproject' using Django 4.1.3.[m
+[32m+[m
+[32m+[m[32mFor more information on this file, see[m
+[32m+[m[32mhttps://docs.djangoproject.com/en/4.1/topics/settings/[m
+[32m+[m
+[32m+[m[32mFor the full list of settings and their values, see[m
+[32m+[m[32mhttps://docs.djangoproject.com/en/4.1/ref/settings/[m
+[32m+[m[32m"""[m
+[32m+[m
+[32m+[m[32mfrom pathlib import Path[m
+[32m+[m
+[32m+[m[32m# Build paths inside the project like this: BASE_DIR / 'subdir'.[m
+[32m+[m[32mBASE_DIR = Path(__file__).resolve().parent.parent[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Quick-start development settings - unsuitable for production[m
+[32m+[m[32m# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/[m
+[32m+[m
+[32m+[m[32m# SECURITY WARNING: keep the secret key used in production secret![m
+[32m+[m[32mSECRET_KEY = 'django-insecure-t_%(qtu9q4g($iicqwi*c!yek_low4dichx!6m*(7&4gac%sqq'[m
+[32m+[m
+[32m+[m[32m# SECURITY WARNING: don't run with debug turned on in production![m
+[32m+[m[32mDEBUG = True[m
+[32m+[m
+[32m+[m[32mALLOWED_HOSTS = [][m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Application definition[m
+[32m+[m
+[32m+[m[32mINSTALLED_APPS = [[m
+[32m+[m[32m    'django.contrib.admin',[m
+[32m+[m[32m    'django.contrib.auth',[m
+[32m+[m[32m    'django.contrib.contenttypes',[m
+[32m+[m[32m    'django.contrib.sessions',[m
+[32m+[m[32m    'django.contrib.messages',[m
+[32m+[m[32m    'django.contrib.staticfiles',[m
+[32m+[m[32m    'blog.apps.BlogConfig',[m
+[32m+[m[32m][m
+[32m+[m
+[32m+[m[32mMIDDLEWARE = [[m
+[32m+[m[32m    'django.middleware.security.SecurityMiddleware',[m
+[32m+[m[32m    'django.contrib.sessions.middleware.SessionMiddleware',[m
+[32m+[m[32m    'django.middleware.common.CommonMiddleware',[m
+[32m+[m[32m    'django.middleware.csrf.CsrfViewMiddleware',[m
+[32m+[m[32m    'django.contrib.auth.middleware.AuthenticationMiddleware',[m
+[32m+[m[32m    'django.contrib.messages.middleware.MessageMiddleware',[m
+[32m+[m[32m    'django.middleware.clickjacking.XFrameOptionsMiddleware',[m
+[32m+[m[32m][m
+[32m+[m
+[32m+[m[32mROOT_URLCONF = 'siteblog.urls'[m
+[32m+[m
+[32m+[m[32mTEMPLATES = [[m
+[32m+[m[32m    {[m
+[32m+[m[32m        'BACKEND': 'django.template.backends.django.DjangoTemplates',[m
+[32m+[m[32m        'DIRS': [],[m
+[32m+[m[32m        'APP_DIRS': True,[m
+[32m+[m[32m        'OPTIONS': {[m
+[32m+[m[32m            'context_processors': [[m
+[32m+[m[32m                'django.template.context_processors.debug',[m
+[32m+[m[32m                'django.template.context_processors.request',[m
+[32m+[m[32m                'django.contrib.auth.context_processors.auth',[m
+[32m+[m[32m                'django.contrib.messages.context_processors.messages',[m
+[32m+[m[32m            ],[m
+[32m+[m[32m        },[m
+[32m+[m[32m    },[m
+[32m+[m[32m][m
+[32m+[m
+[32m+[m[32mWSGI_APPLICATION = 'siteblog.wsgi.application'[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Database[m
+[32m+[m[32m# https://docs.djangoproject.com/en/4.1/ref/settings/#databases[m
+[32m+[m
+[32m+[m[32mDATABASES = {[m
+[32m+[m[32m    'default': {[m
+[32m+[m[32m        'ENGINE': 'django.db.backends.sqlite3',[m
+[32m+[m[32m        'NAME': BASE_DIR / 'db.sqlite3',[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Password validation[m
+[32m+[m[32m# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators[m
+[32m+[m
+[32m+[m[32mAUTH_PASSWORD_VALIDATORS = [[m
+[32m+[m[32m    {[m
+[32m+[m[32m        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',[m
+[32m+[m[32m    },[m
+[32m+[m[32m][m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Internationalization[m
+[32m+[m[32m# https://docs.djangoproject.com/en/4.1/topics/i18n/[m
+[32m+[m
+[32m+[m[32mLANGUAGE_CODE = 'ru'[m
+[32m+[m
+[32m+[m[32mTIME_ZONE = 'UTC'[m
+[32m+[m
+[32m+[m[32mUSE_I18N = True[m
+[32m+[m
+[32m+[m[32mUSE_TZ = True[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Static files (CSS, JavaScript, Images)[m
+[32m+[m[32m# https://docs.djangoproject.com/en/4.1/howto/static-files/[m
+[32m+[m
+[32m+[m[32mSTATIC_URL = 'static/'[m
+[32m+[m
+[32m+[m[32m# Default primary key field type[m
+[32m+[m[32m# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field[m
+[32m+[m
+[32m+[m[32mDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'[m
+[1mdiff --git a/siteblog/siteblog/urls.py b/siteblog/siteblog/urls.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..718076a[m
+[1m--- /dev/null[m
+[1m+++ b/siteblog/siteblog/urls.py[m
+[36m@@ -0,0 +1,21 @@[m
+[32m+[m[32m"""siteblog URL Configuration[m
+[32m+[m
+[32m+[m[32mThe `urlpatterns` list routes URLs to views. For more information please see:[m
+[32m+[m[32m    https://docs.djangoproject.com/en/4.1/topics/http/urls/[m
+[32m+[m[32mExamples:[m
+[32m+[m[32mFunction views[m
+[32m+[m[32m    1. Add an import:  from my_app import views[m
+[32m+[m[32m    2. Add a URL to urlpatterns:  path('', views.home, name='home')[m
+[32m+[m[32mClass-based views[m
+[32m+[m[32m    1. Add an import:  from other_app.views import Home[m
+[32m+[m[32m    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')[m
+[32m+[m[32mIncluding another URLconf[m
+[32m+[m[32m    1. Import the include() function: from django.urls import include, path[m
+[32m+[m[32m    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))[m
+[32m+[m[32m"""[m
+[32m+[m[32mfrom django.contrib import admin[m
+[32m+[m[32mfrom django.urls import path[m
+[32m+[m
+[32m+[m[32murlpatterns = [[m
+[32m+[m[32m    path('admin/', admin.site.urls),[m
+[32m+[m[32m][m
+[1mdiff --git a/siteblog/siteblog/wsgi.py b/siteblog/siteblog/wsgi.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f850999[m
+[1m--- /dev/null[m
+[1m+++ b/siteblog/siteblog/wsgi.py[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m"""[m
+[32m+[m[32mWSGI config for siteblog project.[m
+[32m+[m
+[32m+[m[32mIt exposes the WSGI callable as a module-level variable named ``application``.[m
+[32m+[m
+[32m+[m[32mFor more information on this file, see[m
+[32m+[m[32mhttps://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/[m
+[32m+[m[32m"""[m
+[32m+[m
+[32m+[m[32mimport os[m
+[32m+[m
+[32m+[m[32mfrom django.core.wsgi import get_wsgi_application[m
+[32m+[m
+[32m+[m[32mos.environ.setdefault('DJANGO_SETTINGS_MODULE', 'siteblog.settings')[m
+[32m+[m
+[32m+[m[32mapplication = get_wsgi_application()[m
+[1mdiff --git a/venv/Lib/site-packages/Django-4.1.3.dist-info/AUTHORS b/venv/Lib/site-packages/Django-4.1.3.dist-info/AUTHORS[m
+[1mnew file mode 100644[m
+[1mindex 0000000..cbee9eb[m
+[1m--- /dev/null[m
+[1m+++ b/venv/Lib/site-packages/Django-4.1.3.dist-info/AUTHORS[m
+[36m@@ -0,0 +1,1046 @@[m
+[32m+[m[32mDjango was originally created in late 2003 at World Online, the web division[m
+[32m+[m[32mof the Lawrence Journal-World newspaper in Lawrence, Kansas.[m
+[32m+[m
+[32m+[m[32mHere is an inevitably incomplete list of MUCH-APPRECIATED CONTRIBUTORS --[m
+[32m+[m[32mpeople who have submitted patches, reported bugs, added translations, helped[m
+[32m+[m[32manswer newbie questions, and generally made Django that much better:[m
+[32m+[m
+[32m+[m[32m    Aaron Cannon <cannona@fireantproductions.com>[m
+[32m+[m[32m    Aaron Swartz <http://www.aaronsw.com/>[m
+[32m+[m[32m    Aaron T. Myers <atmyers@gmail.com>[m
+[32m+[m[32m    Abeer Upadhyay <ab.esquarer@gmail.com>[m
+[32m+[m[32m    Abhijeet Viswa <abhijeetviswa@gmail.com>[m
+[32m+[m[32m    Abhinav Patil <https://github.com/ubadub/>[m
+[32m+[m[32m    Abhishek Gautam <abhishekg1128@yahoo.com>[m
+[32m+[m[32m    Abhyudai <https://github.com/abhiabhi94>[m
+[32m+[m[32m    Adam Allred <adam.w.allred@gmail.com>[m
+[32m+[m[32m    Adam Bogdał <adam@bogdal.pl>[m
+[32m+[m[32m    Adam Donaghy[m
+[32m+[m[32m    Adam Johnson <https://github.com/adamchainz>[m
+[32m+[m[32m    Adam Malinowski <https://adammalinowski.co.uk/>[m
+[32m+[m[32m    Adam Vandenberg[m
+[32m+[m[32m    Ade Lee <alee@redhat.com>[m
+[32m+[m[32m    Adiyat Mubarak <adiyatmubarak@gmail.com>[m
+[32m+[m[32m    Adnan Umer <u.adnan@outlook.com>[m
+[32m+[m[32m    Arslan Noor <arslannoorpansota@gmail.com>[m
+[32m+[m[32m    Adrian Holovaty <adrian@holovaty.com>[m
+[32m+[m[32m    Adrian Torres <atorresj@redhat.com>[m
+[32m+[m[32m    Adrien Lemaire <lemaire.adrien@gmail.com>[m
+[32m+[m[32m    Afonso Fernández Nogueira <fonzzo.django@gmail.com>[m
+[32m+[m[32m    AgarFu <heaven@croasanaso.sytes.net>[m
+[32m+[m[32m    Ahmad Alhashemi <trans@ahmadh.com>[m
+[32m+[m[32m    Ahmad Al-Ibrahim[m
+[32m+[m[32m    Ahmed Eltawela <https://github.com/ahmedabt>[m
+[32m+[m[32m    ajs <adi@sieker.info>[m
+[32m+[m[32m    Akash Agrawal <akashrocksha@gmail.com>[m
+[32m+[m[32m    Akis Kesoglou <akiskesoglou@gmail.com>[m
+[32m+[m[32m    Aksel Ethem <aksel.ethem@gmail.com>[m
+[32m+[m[32m    Akshesh Doshi <aksheshdoshi+django@gmail.com>[m
+[32m+[m[32m    alang@bright-green.com[m
+[32m+[m[32m    Alasdair Nicol <https://al.sdair.co.uk/>[m
+[32m+[m[32m    Albert Wang <https://github.com/albertyw/>[m
+[32m+[m[32m    Alcides Fonseca[m
+[32m+[m[32m    Aldian Fazrihady <mobile@aldian.net>[m
+[32m+[m[32m    Aleksandra Sendecka <asendecka@hauru.eu>[m
+[32m+[m[32m    Aleksi Häkli <aleksi.hakli@iki.fi>[m
+[32m+[m[32m    Alex Dutton <django@alexdutton.co.uk>[m
+[32m+[m[32m    Alexander Myodov <alex@myodov.com>[m
+[32m+[m[32m    Alexandr Tatarinov <tatarinov.dev@gmail.com>[m
+[32m+[m[32m    Alex Aktsipetrov <alex.akts@gmail.com>[m
+[32m+[m[32m    Alex Becker <https://alexcbecker.net/>[m
+[32m+[m[32m    Alex Couper <http://alexcouper.com/>[m
+[32m+[m[32m    Alex Dedul[m
+[32m+[m[32m    Alex Gaynor <alex.gaynor@gmail.com>[m
+[32m+[m[32m    Alex Hill <alex@hill.net.au>[m
+[32m+[m[32m    Alex Ogier <alex.ogier@gmail.com>[m
+[32m+[m[32m    Alex Robbins <alexander.j.robbins@gmail.com>[m
+[32m+[m[32m    Alexey Boriskin <alex@boriskin.me>[m
+[32m+[m[32m    Alexey Tsivunin <most-208@yandex.ru>[m
+[32m+[m[32m    Ali Vakilzade <ali@vakilzade.com>[m
+[32m+[m[32m    Aljaž Košir <aljazkosir5@gmail.com>[m
+[32m+[m[32m    Aljosa Mohorovic <aljosa.mohorovic@gmail.com>[m
+[32m+[m[32m    Alokik Vijay <alokik.roe@gmail.com>[m
+[32m+[m[32m    Amit Chakradeo <https://amit.chakradeo.net/>[m
+[32m+[m[32m    Amit Ramon <amit.ramon@gmail.com>[m
+[32m+[m[32m    Amit Upadhyay <http://www.amitu.com/blog/>[m
+[32m+[m[32m    A. Murat Eren <meren@pardus.org.tr>[m
+[32m+[m[32m    Ana Belen Sarabia <belensarabia@gmail.com>[m
+[32m+[m[32m    Ana Krivokapic <https://github.com/infraredgirl>[m
+[32m+[m[32m    Andi Albrecht <albrecht.andi@gmail.com>[m
+[32m+[m[32m    André Ericson <de.ericson@gmail.com>[m
+[32m+[m[32m    Andrei Kulakov <andrei.avk@gmail.com>[m
+[32m+[m[32m    Andreas[m
+[32m+[m[32m    Andreas Mock <andreas.mock@web.de>[m
+[32m+[m[32m    Andreas Pelme <andreas@pelme.se>[m
+[32m+[m[32m    Andrés Torres Marroquín <andres.torres.marroquin@gmail.com>[m
+[32m+[m[32m    Andrew Brehaut <https://brehaut.net/blog>[m
+[32m+[m[32m    Andrew Clark <amclark7@gmail.com>[m
+[32m+[m[32m    Andrew Durdin <adurdin@gmail.com>[m
+[32m+[m[32m    Andrew Godwin <andrew@aeracode.org>[m
+[32m+[m[32m    Andrew Pinkham <http://AndrewsForge.com>[m
+[32m+[m[32m    Andrews Medina <andrewsmedina@gmail.com>[m
+[32m+[m[32m    Andrew Northall <andrew@northall.me.uk>[m
+[32m+[m[32m    Andriy Sokolovskiy <me@asokolovskiy.com>[m
+[32m+[m[32m    Andy Chosak <andy@chosak.org>[m
+[32m+[m[32m    Andy Dustman <farcepest@gmail.com>[m
+[32m+[m[32m    Andy Gayton <andy-django@thecablelounge.com>[m
+[32m+[m[32m    andy@jadedplanet.net[m
+[32m+[m[32m    Anssi Kääriäinen <akaariai@gmail.com>[m
+[32m+[m[32m    ant9000@netwise.it[m
+[32m+[m[32m    Anthony Briggs <anthony.briggs@gmail.com>[m
+[32m+[m[32m    Anthony Wright <ryow.college@gmail.com>[m
+[32m+[m[32m    Anton Samarchyan <desecho@gmail.com>[m
+[32m+[m[32m    Antoni Aloy[m
+[32m+[m[32m    Antonio Cavedoni <http://cavedoni.com/>[m
+[32m+[m[32m    Antonis Christofides <anthony@itia.ntua.gr>[m
+[32m+[m[32m    Antti Haapala <antti@industrialwebandmagic.com>[m
+[32m+[m[32m    Antti Kaihola <http://djangopeople.net/akaihola/>[m
+[32m+[m[32m    Anubhav Joshi <anubhav9042@gmail.com>[m
+[32m+[m[32m    Aram Dulyan[m
+[32m+[m[32m    arien <regexbot@gmail.com>[m
+[32m+[m[32m    Armin Ronacher[m
+[32m+[m[32m    Aron Podrigal <aronp@guaranteedplus.com>[m
+[32m+[m[32m    Arsalan Ghassemi <arsalan.ghassemi@gmail.com>[m
+[32m+[m[32m    Artem Gnilov <boobsd@gmail.com>[m
+[32m+[m[32m    Arthur <avandorp@gmail.com>[m
+[32m+[m[32m    Arthur Jovart <arthur@jovart.com>[m
+[32m+[m[32m    Arthur Koziel <http://arthurkoziel.com>[m
+[32m+[m[32m    Arthur Rio <arthur.rio44@gmail.com>[m
+[32m+[m[32m    Arvis Bickovskis <viestards.lists@gmail.com>[m
+[32m+[m[32m    Arya Khaligh <bartararya@gmail.com>[m
+[32m+[m[32m    Aryeh Leib Taurog <http://www.aryehleib.com/>[m
+[32m+[m[32m    A S Alam <aalam@users.sf.net>[m
+[32m+[m[32m    Asif Saif Uddin <auvipy@gmail.com>[m
+[32m+[m[32m    atlithorn <atlithorn@gmail.com>[m
+[32m+[m[32m    Audrey Roy <http://audreymroy.com/>[m
+[32m+[m[32m    av0000@mail.ru[m
+[32m+[m[32m    Axel Haustant <noirbizarre@gmail.com>[m
+[32m+[m[32m    Aymeric Augustin <aymeric.augustin@m4x.org>[m
+[32m+[m[32m    Bahadır Kandemir <bahadir@pardus.org.tr>[m
+[32m+[m[32m    Baishampayan Ghose[m
+[32m+[m[32m    Baptiste Mispelon <bmispelon@gmail.com>[m
+[32m+[m[32m    Barry Pederson <bp@barryp.org>[m
+[32m+[m[32m    Bartolome Sanchez Salado <i42sasab@uco.es>[m
+[32m+[m[32m    Barton Ip <notbartonip@gmail.com>[m
+[32m+[m[32m    Bartosz Grabski <bartosz.grabski@gmail.com>[m
+[32m+[m[32m    Bashar Al-Abdulhadi[m
+[32m+[m[32m    Bastian Kleineidam <calvin@debian.org>[m
+[32m+[m[32m    Batiste Bieler <batiste.bieler@gmail.com>[m
+[32m+[m[32m    Batman[m
+[32m+[m[32m    Batuhan Taskaya <batuhanosmantaskaya@gmail.com>[m
+[32m+[m[32m    Baurzhan Ismagulov <ibr@radix50.net>[m
+[32m+[m[32m    Ben Dean Kawamura <ben.dean.kawamura@gmail.com>[m
+[32m+[m[32m    Ben Firshman <ben@firshman.co.uk>[m
+[32m+[m[32m    Ben Godfrey <http://aftnn.org>[m
+[32m+[m[32m    Benjamin Wohlwend <piquadrat@gmail.com>[m
+[32m+[m[32m    Ben Khoo <khoobks@westnet.com.au>[m
+[32m+[m[32m    Ben Slavin <benjamin.slavin@gmail.com>[m
+[32m+[m[32m    Ben Sturmfels <ben@sturm.com.au>[m
+[32m+[m[32m    Berker Peksag <berker.peksag@gmail.com>[m
+[32m+[m[32m    Bernd Schlapsi[m
+[32m+[m[32m    Bernhard Essl <me@bernhardessl.com>[m
+[32m+[m[32m    berto[m
+[32m+[m[32m    Bill Fenner <fenner@gmail.com>[m
+[32m+[m[32m    Bjørn Stabell <bjorn@exoweb.net>[m
+[32m+[m[32m    Bo Marchman <bo.marchman@gmail.com>[m
+[32m+[m[32m    Bogdan Mateescu[m
+[32m+[m[32m    Bojan Mihelac <bmihelac@mihelac.org>[m
+[32m+[m[32m    Bouke Haarsma <bouke@haarsma.eu>[m
+[32m+[m[32m    Božidar Benko <bbenko@gmail.com>[m
+[32m+[m[32m    Brad Melin <melinbrad@gmail.com>[m
+[32m+[m[32m    Brandon Chinn <https://brandonchinn178.github.io/>[m
+[32m+[m[32m    Brant Harris[m
+[32m+[m[32m    Brendan Hayward <brendanhayward85@gmail.com>[m
+[32m+[m[32m    Brendan Quinn <brendan@cluefulmedia.com>[m
+[32m+[m[32m    Brenton Simpson <http://theillustratedlife.com>[m
+[32m+[m[32m    Brett Cannon <brett@python.org>[m
+[32m+[m[32m    Brett Hoerner <bretthoerner@bretthoerner.com>[m
+[32m+[m[32m    Brian Beck <http://blog.brianbeck.com/>[m
+[32m+[m[32m    Brian Fabian Crain <http://www.bfc.do/>[m
+[32m+[m[32m    Brian Harring <ferringb@gmail.com>[m
+[32m+[m[32m    Brian Helba <brian.helba@kitware.com>[m
+[32m+[m[32m    Brian Ray <http://brianray.chipy.org/>[m
+[32m+[m[32m    Brian Rosner <brosner@gmail.com>[m
+[32m+[m[32m    Bruce Kroeze <https://coderseye.com/>[m
+[32m+[m[32m    Bruno Alla <alla.brunoo@gmail.com>[m
+[32m+[m[32m    Bruno Renié <buburno@gmail.com>[m
+[32m+[m[32m    brut.alll@gmail.com[m
+[32m+[m[32m    Bryan Chow <bryan at verdjn dot com>[m
+[32m+[m[32m    Bryan Veloso <bryan@revyver.com>[m
+[32m+[m[32m    bthomas[m
+[32m+[m[32m    btoll@bestweb.net[m
+[32m+[m[32m    C8E[m
+[32m+[m[32m    Caio Ariede <caio.ariede@gmail.com>[m
+[32m+[m[32m    Calvin Spealman <ironfroggy@gmail.com>[m
+[32m+[m[32m    Cameron Curry[m
+[32m+[m[32m    Cameron Knight (ckknight)[m
+[32m+[m[32m    Can Burak Çilingir <canburak@cs.bilgi.edu.tr>[m
+[32m+[m[32m    Can Sarıgöl <ertugrulsarigol@gmail.com>[m
+[32m+[m[32m    Carl Meyer <carl@oddbird.net>[m
+[32m+[m[32m    Carles Pina i Estany <carles@pina.cat>[m
+[32m+[m[32m    Carlos Eduardo de Paula <carlosedp@gmail.com>[m
+[32m+[m[32m    Carlos Matías de la Torre <cmdelatorre@gmail.com>[m
+[32m+[m[32m    Carlton Gibson <carlton.gibson@noumenal.es>[m
+[32m+[m[32m    cedric@terramater.net[m
+[32m+[m[32m    Chad Whitman <chad.whitman@icloud.com>[m
+[32m+[m[32m    ChaosKCW[m
+[32m+[m[32m    Charlie Leifer <coleifer@gmail.com>[m
+[32m+[m[32m    charly.wilhelm@gmail.com[m
+[32m+[m[32m    Chason Chaffin <chason@gmail.com>[m
+[32m+[m[32m    Cheng Zhang[m
+[32m+[m[32m    Chris Adams[m
+[32m+[m[32m    Chris Beaven <smileychris@gmail.com>[m
+[32m+[m[32m    Chris Bennett <chrisrbennett@yahoo.com>[m
+[32m+[m[32m    Chris Cahoon <chris.cahoon@gmail.com>[m
+[32m+[m[32m    Chris Chamberlin <dja@cdc.msbx.net>[m
+[32m+[m[32m    Chris Jerdonek[m
+[32m+[m[32m    Chris Jones <chris@brack3t.com>[m
+[32m+[m[32m    Chris Lamb <chris@chris-lamb.co.uk>[m
+[32m+[m[32m    Chris Streeter <chris@chrisstreeter.com>[m
+[32m+[m[32m    Christian Barcenas <christian@cbarcenas.com>[m
+[32m+[m[32m    Christian Metts[m
+[32m+[m[32m    Christian Oudard <christian.oudard@gmail.com>[m
+[32m+[m[32m    Christian Tanzer <tanzer@swing.co.at>[m
+[32m+[m[32m    Christoffer Sjöbergsson[m
+[32m+[m[32m    Christophe Pettus <xof@thebuild.com>[m
+[32m+[m[32m    Christopher Adams <http://christopheradams.info>[m
+[32m+[m[32m    Christopher Babiak <chrisbabiak@gmail.com>[m
+[32m+[m[32m    Christopher Lenz <https://www.cmlenz.net/>[m
+[32m+[m[32m    Christoph Mędrela <chris.medrela@gmail.com>[m
+[32m+[m[32m    Chris Wagner <cw264701@ohio.edu>[m
+[32m+[m[32m    Chris Wesseling <Chris.Wesseling@cwi.nl>[m
+[32m+[m[32m    Chris Wilson <chris+github@qwirx.com>[m
+[32m+[m[32m    Claude Paroz <claude@2xlibre.net>[m
+[32m+[m[32m    Clint Ecker[m
+[32m+[m[32m    colin@owlfish.com[m
+[32m+[m[32m    Colin Wood <cwood06@gmail.com>[m
+[32m+[m[32m    Collin Anderson <cmawebsite@gmail.com>[m
+[32m+[m[32m    Collin Grady <collin@collingrady.com>[m
+[32m+[m[32m    Colton Hicks <coltonbhicks@gmail.com>[m
+[32m+[m[32m    Craig Blaszczyk <masterjakul@gmail.com>[m
+[32m+[m[32m    crankycoder@gmail.com[m
+[32m+[m[32m    Curtis Maloney (FunkyBob) <curtis@tinbrain.net>[m
+[32m+[m[32m    dackze+django@gmail.com[m
+[32m+[m[32m    Dagur Páll Ammendrup <dagurp@gmail.com>[m
+[32m+[m[32m    Dane Springmeyer[m
+[32m+[m[32m    Dan Fairs <dan@fezconsulting.com>[m
+[32m+[m[32m    Daniel Alves Barbosa de Oliveira Vaz <danielvaz@gmail.com>[m
+[32m+[m[32m    Daniel Duan <DaNmarner@gmail.com>[m
+[32m+[m[32m    Daniele Procida <daniele@vurt.org>[m
+[32m+[m[32m    Daniel Fairhead <danthedeckie@gmail.com>[m
+[32m+[m[32m    Daniel Greenfeld[m
+[32m+[m[32m    dAniel hAhler[m
+[32m+[m[32m    Daniel Jilg <daniel@breakthesystem.org>[m
+[32m+[m[32m    Daniel Lindsley <daniel@toastdriven.com>[m
+[32m+[m[32m    Daniel Poelzleithner <https://poelzi.org/>[m
+[32m+[m[32m    Daniel Pyrathon <pirosb3@gmail.com>[m
+[32m+[m[32m    Daniel Roseman <http://roseman.org.uk/>[m
+[32m+[m[32m    Daniel Tao <https://philosopherdeveloper.com/>[m
+[32m+[m[32m    Daniel Wiesmann <daniel.wiesmann@gmail.com>[m
+[32m+[m[32m    Danilo Bargen[m
+[32m+[m[32m    Dan Johnson <danj.py@gmail.com>[m
+[32m+[m[32m    Dan Palmer <dan@danpalmer.me>[m
+[32m+[m[32m    Dan Poirier <poirier@pobox.com>[m
+[32m+[m[32m    Dan Stephenson <http://dan.io/>[m
+[32m+[m[32m    Dan Watson <http://danwatson.net/>[m
+[32m+[m[32m    dave@thebarproject.com[m
+[32m+[m[32m    David Ascher <https://ascher.ca/>[m
+[32m+[m[32m    David Avsajanishvili <avsd05@gmail.com>[m
+[32m+[m[32m    David Blewett <david@dawninglight.net>[m
+[32m+[m[32m    David Brenneman <http://davidbrenneman.com>[m
+[32m+[m[32m    David Cramer <dcramer@gmail.com>[m
+[32m+[m[32m    David Danier <david.danier@team23.de>[m
+[32m+[m[32m    David Eklund[m
+[32m+[m[32m    David Foster <david@dafoster.net>[m
+[32m+[m[32m    David Gouldin <dgouldin@gmail.com>[m
+[32m+[m[32m    david@kazserve.org[m
+[32m+[m[32m    David Krauth[m
+[32m+[m[32m    David Larlet <https://larlet.fr/david/>[m
+[32m+[m[32m    David Reynolds <david@reynoldsfamily.org.uk>[m
+[32m+[m[32m    David Sanders <dsanders11@ucsbalum.com>[m
+[32m+[m[32m    David Schein[m
+[32m+[m[32m    David Tulig <david.tulig@gmail.com>[m
+[32m+[m[32m    David Winterbottom <david.winterbottom@gmail.com>[m
+[32m+[m[32m    David Wobrock <david.wobrock@gmail.com>[m
+[32m+[m[32m    Davide Ceretti <dav.ceretti@gmail.com>[m
+[32m+[m[32m    Deep L. Sukhwani <deepsukhwani@gmail.com>[m
+[32m+[m[32m    Deepak Thukral <deep.thukral@gmail.com>[m
+[32m+[m[32m    Denis Kuzmichyov <kuzmichyov@gmail.com>[m
+[32m+[m[32m    Dennis Schwertel <dennisschwertel@gmail.com>[m
+[32m+[m[32m    Derek Willis <http://blog.thescoop.org/>[m
+[32m+[m[32m    Deric Crago <deric.crago@gmail.com>[m
+[32m+[m[32m    deric@monowerks.com[m
+[32m+[m[32m    Deryck Hodge <http://www.devurandom.org/>[m
+[32m+[m[32m    Dimitris Glezos <dimitris@glezos.com>[m
+[32m+[m[32m    Dirk Datzert <dummy@habmalnefrage.de>[m
+[32m+[m[32m    Dirk Eschler <dirk.eschler@gmx.net>[m
+[32m+[m[32m    Dmitri Fedortchenko <zeraien@gmail.com>[m
+[32m+[m[32m    Dmitry Jemerov <intelliyole@gmail.com>[m
+[32m+[m[32m    dne@mayonnaise.net[m
+[32m+[m[32m    Dolan Antenucci <antenucci.d@gmail.com>[m
+[32m+[m[32m    Donald Harvey <donald@donaldharvey.co.uk>[m
+[32m+[m[32m    Donald Stufft <donald@stufft.io>[m
+[32m+[m[32m    Don Spaulding <donspauldingii@gmail.com>[m
+[32m+[m[32m    Doug Beck <doug@douglasbeck.com>[m
+[32m+[m[32m    Doug Napoleone <doug@dougma.com>[m
+[32m+[m[32m    dready <wil@mojipage.com>[m
+[32m+[m[32m    dusk@woofle.net[m
+[32m+[m[32m    Dustyn Gibson <miigotu@gmail.com>[m
+[32m+[m[32m    Ed Morley <https://github.com/edmorley>[m
+[32m+[m[32m    Egidijus Macijauskas <e.macijauskas@outlook.com>[m
+[32m+[m[32m    eibaan@gmail.com[m
+[32m+[m[32m    elky <http://elky.me/>[m
+[32m+[m[32m    Emmanuelle Delescolle <https://github.com/nanuxbe>[m
+[32m+[m[32m    Emil Stenström <em@kth.se>[m
+[32m+[m[32m    enlight[m
+[32m+[m[32m    Enrico <rico.bl@gmail.com>[m
+[32m+[m[32m    Eric Boersma <eric.boersma@gmail.com>[m
+[32m+[m[32m    Eric Brandwein <brandweineric@gmail.com>[m
+[32m+[m[32m    Eric Floehr <eric@intellovations.com>[m
+[32m+[m[32m    Eric Florenzano <floguy@gmail.com>[m
+[32m+[m[32m    Eric Holscher <http://ericholscher.com>[m
+[32m+[m[32m    Eric Moritz <http://eric.themoritzfamily.com/>[m
+[32m+[m[32m    Eric Palakovich Carr <carreric@gmail.com>[m
+[32m+[m[32m    Erik Karulf <erik@karulf.com>[m
+[32m+[m[32m    Erik Romijn <django@solidlinks.nl>[m
+[32m+[m[32m    eriks@win.tue.nl[m
+[32m+[m[32m    Erwin Junge <erwin@junge.nl>[m
+[32m+[m[32m    Esdras Beleza <linux@esdrasbeleza.com>[m
+[32m+[m[32m    Espen Grindhaug <http://grindhaug.org/>[m
+[32m+[m[32m    Étienne Beaulé <beauleetienne0@gmail.com>[m
+[32m+[m[32m    Eugene Lazutkin <http://lazutkin.com/blog/>[m
+[32m+[m[32m    Evan Grim <https://github.com/egrim>[m
+[32m+[m[32m    Fabian Büchler <fabian.buechler@inoqo.com>[m
+[32m+[m[32m    Fabrice Aneche <akh@nobugware.com>[m
+[32m+[m[32m    Farhaan Bukhsh <farhaan.bukhsh@gmail.com>[m
+[32m+[m[32m    favo@exoweb.net[m
+[32m+[m[32m    fdr <drfarina@gmail.com>[m
+[32m+[m[32m    Federico Capoano <nemesis@ninux.org>[m
+[32m+[m[32m    Felipe Lee <felipe.lee.garcia@gmail.com>[m
+[32m+[m[32m    Filip Noetzel <http://filip.noetzel.co.uk/>[m
+[32m+[m[32m    Filip Wasilewski <filip.wasilewski@gmail.com>[m
+[32m+[m[32m    Finn Gruwier Larsen <finn@gruwier.dk>[m
+[32m+[m[32m    Fiza Ashraf <fizaashraf37@gmail.com>[m
+[32m+[m[32m    Flávio Juvenal da Silva Junior <flavio@vinta.com.br>[m
+[32m+[m[32m    flavio.curella@gmail.com[m
+[32m+[m[32m    Florian Apolloner <florian@apolloner.eu>[m
+[32m+[m[32m    Florian Demmer <fdemmer@gmail.com>[m
+[32m+[m[32m    Florian Moussous <florian.moussous@gmail.com>[m
+[32m+[m[32m    Fran Hrženjak <fran.hrzenjak@gmail.com>[m
+[32m+[m[32m    Francisco Albarran Cristobal <pahko.xd@gmail.com>[m
+[32m+[m[32m    Francisco Couzo <franciscouzo@gmail.com>[m
+[32m+[m[32m    François Freitag <mail@franek.fr>[m
+[32m+[m[32m    Frank Tegtmeyer <fte@fte.to>[m
+[32m+[m[32m    Frank Wierzbicki[m
+[32m+[m[32m    Frank Wiles <frank@revsys.com>[m
+[32m+[m[32m    František Malina <https://unilexicon.com/fm/>[m
+[32m+[m[32m    Fraser Nevett <mail@nevett.org>[m
+[32m+[m[32m    Gabriel Grant <g@briel.ca>[m
+[32m+[m[32m    Gabriel Hurley <gabriel@strikeawe.com>[m
+[32m+[m[32m    gandalf@owca.info[m
+[32m+[m[32m    Garry Lawrence[m
+[32m+[m[32m    Garry Polley <garrympolley@gmail.com>[m
+[32m+[m[32m    Garth Kidd <http://www.deadlybloodyserious.com/>[m
+[32m+[m[32m    Gary Wilson <gary.wilson@gmail.com>[m
+[32m+[m[32m    Gasper Koren[m
+[32m+[m[32m    Gasper Zejn <zejn@kiberpipa.org>[m
+[32m+[m[32m    Gavin Wahl <gavinwahl@gmail.com>[m
+[32m+[m[32m    Ge Hanbin <xiaomiba0904@gmail.com>[m
+[32m+[m[32m    geber@datacollect.com[m
+[32m+[m[32m    Geert Vanderkelen[m
+[32m+[m[32m    George Karpenkov <george@metaworld.ru>[m
+[32m+[m[32m    George Song <george@damacy.net>[m
+[32m+[m[32m    George Vilches <gav@thataddress.com>[m
+[32m+[m[32m    Georg "Hugo" Bauer <gb@hugo.westfalen.de>[m
+[32m+[m[32m    Georgi Stanojevski <glisha@gmail.com>[m
+[32m+[m[32m    Gerardo Orozco <gerardo.orozco.mosqueda@gmail.com>[m
+[32m+[m[32m    Gil Gonçalves <lursty@gmail.com>[m
+[32m+[m[32m    Girish Kumar <girishkumarkh@gmail.com>[m
+[32m+[m[32m    Girish Sontakke <girishsontakke7@gmail.com>[m
+[32m+[m[32m    Gisle Aas <gisle@aas.no>[m
+[32m+[m[32m    Glenn Maynard <glenn@zewt.org>[m
+[32m+[m[32m    glin@seznam.cz[m
+[32m+[m[32m    GomoX <gomo@datafull.com>[m
+[32m+[m[32m    Gonzalo Saavedra <gonzalosaavedra@gmail.com>[m
+[32m+[m[32m    Gopal Narayanan <gopastro@gmail.com>[m
+[32m+[m[32m    Graham Carlyle <graham.carlyle@maplecroft.net>[m
+[32m+[m[32m    Grant Jenks <contact@grantjenks.com>[m
+[32m+[m[32m    Greg Chapple <gregchapple1@gmail.com>[m
+[32m+[m[32m    Greg Twohig[m
+[32m+[m[32m    Gregor Allensworth <greg.allensworth@gmail.com>[m
+[32m+[m[32m    Gregor Müllegger <gregor@muellegger.de>[m
+[32m+[m[32m    Grigory Fateyev <greg@dial.com.ru>[m
+[32m+[m[32m    Grzegorz Ślusarek <grzegorz.slusarek@gmail.com>[m
+[32m+[m[32m    Guilherme Mesquita Gondim <semente@taurinus.org>[m
+[32m+[m[32m    Guillaume Pannatier <guillaume.pannatier@gmail.com>[m
+[32m+[m[32m    Gustavo Picon[m
+[32m+[m[32m    hambaloney[m
+[32m+[m[32m    Hang Park <hangpark@kaist.ac.kr>[m
+[32m+[m[32m    Hannes Ljungberg <hannes.ljungberg@gmail.com>[m
+[32m+[m[32m    Hannes Struß <x@hannesstruss.de>[m
+[32m+[m[32m    Harm Geerts <hgeerts@gmail.com>[m
+[32m+[m[32m    Hasan Ramezani <hasan.r67@gmail.com>[m
+[32m+[m[32m    Hawkeye[m
+[32m+[m[32m    Helen Sherwood-Taylor <helen@rrdlabs.co.uk>[m
+[32m+[m[32m    Henrique Romano <onaiort@gmail.com>[m
+[32m+[m[32m    Henry Dang <henrydangprg@gmail.com>[m
+[32m+[m[32m    Hidde Bultsma[m
+[32m+[m[32m    Himanshu Chauhan <hchauhan1404@outlook.com>[m
+[32m+[m[32m    hipertracker@gmail.com[m
+[32m+[m[32m    Hiroki Kiyohara <hirokiky@gmail.com>[m
+[32m+[m[32m    Honza Král <honza.kral@gmail.com>[m
+[32m+[m[32m    Horst Gutmann <zerok@zerokspot.com>[m
+[32m+[m[32m    Hugo Osvaldo Barrera <hugo@barrera.io>[m
+[32m+[m[32m    HyukJin Jang <wkdgurwls00@naver.com>[m
+[32m+[m[32m    Hyun Mi Ae[m
+[32m+[m[32m    Iacopo Spalletti <i.spalletti@nephila.it>[m
+[32m+[m[32m    Ian A Wilson <http://ianawilson.com>[m
+[32m+[m[32m    Ian Clelland <clelland@gmail.com>[m
+[32m+[m[32m    Ian G. Kelly <ian.g.kelly@gmail.com>[m
+[32m+[m[32m    Ian Holsman <http://feh.holsman.net/>[m
+[32m+[m[32m    Ian Lee <IanLee1521@gmail.com>[m
+[32m+[m[32m    Ibon <ibonso@gmail.com>[m
+[32m+[m[32m    Idan Gazit <idan@gazit.me>[m
+[32m+[m[32m    Idan Melamed[m
+[32m+[m[32m    Ifedapo Olarewaju <ifedapoolarewaju@gmail.com>[m
+[32m+[m[32m    Igor Kolar <ike@email.si>[m
+[32m+[m[32m    Illia Volochii <illia.volochii@gmail.com>[m
+[32m+[m[32m    Ilya Semenov <semenov@inetss.com>[m
+[32m+[m[32m    Ingo Klöcker <djangoproject@ingo-kloecker.de>[m
+[32m+[m[32m    I.S. van Oostveen <v.oostveen@idca.nl>[m
+[32m+[m[32m    Iuri de Silvio <https://github.com/iurisilvio>[m
+[32m+[m[32m    ivan.chelubeev@gmail.com[m
+[32m+[m[32m    Ivan Sagalaev (Maniac) <http://www.softwaremaniacs.org/>[m
+[32m+[m[32m    Jaap Roes <jaap.roes@gmail.com>[m
+[32m+[m[32m    Jack Moffitt <https://metajack.im/>[m
+[32m+[m[32m    Jacob Burch <jacobburch@gmail.com>[m
+[32m+[m[32m    Jacob Green[m
+[32m+[m[32m    Jacob Kaplan-Moss <jacob@jacobian.org>[m
+[32m+[m[32m    Jacob Rief <jacob.rief@gmail.com>[m
+[32m+[m[32m    Jacob Walls <http://www.jacobtylerwalls.com/>[m
+[32m+[m[32m    Jakub Paczkowski <jakub@paczkowski.eu>[m
+[32m+[m[32m    Jakub Wilk <jwilk@jwilk.net>[m
+[32m+[m[32m    Jakub Wiśniowski <restless.being@gmail.com>[m
+[32m+[m[32m    james_027@yahoo.com[m
+[32m+[m[32m    James Aylett[m
+[32m+[m[32m    James Bennett <james@b-list.org>[m
+[32m+[m[32m    James Murty[m
+[32m+[m[32m    James Tauber <jtauber@jtauber.com>[m
+[32m+[m[32m    James Timmins <jameshtimmins@gmail.com>[m
+[32m+[m[32m    James Turk <dev@jamesturk.net>[m
+[32m+[m[32m    James Wheare <django@sparemint.com>[m
+[32m+[m[32m    Jamie Matthews <jamie@mtth.org>[m
+[32m+[m[32m    Jannis Leidel <jannis@leidel.info>[m
+[32m+[m[32m    Janos Guljas[m
+[32m+[m[32m    Jan Pazdziora[m
+[32m+[m[32m    Jan Rademaker[m
+[32m+[m[32m    Jarek Głowacki <jarekwg@gmail.com>[m
+[32m+[m[32m    Jarek Zgoda <jarek.zgoda@gmail.com>[m
+[32m+[m[32m    Jarosław Wygoda <jaroslaw@wygoda.me>[m
+[32m+[m[32m    Jason Davies (Esaj) <https://www.jasondavies.com/>[m
+[32m+[m[32m    Jason Huggins <http://www.jrandolph.com/blog/>[m
+[32m+[m[32m    Jason McBrayer <http://www.carcosa.net/jason/>[m
+[32m+[m[32m    jason.sidabras@gmail.com[m
+[32m+[m[32m    Jason Yan <tailofthesun@gmail.com>[m
+[32m+[m[32m    Javier Mansilla <javimansilla@gmail.com>[m
+[32m+[m[32m    Jay Parlar <parlar@gmail.com>[m
+[32m+[m[32m    Jay Welborn <jesse.welborn@gmail.com>[m
+[32m+[m[32m    Jay Wineinger <jay.wineinger@gmail.com>[m
+[32m+[m[32m    J. Clifford Dyer <jcd@sdf.lonestar.org>[m
+[32m+[m[32m    jcrasta@gmail.com[m
+[32m+[m[32m    jdetaeye[m
+[32m+[m[32m    Jeff Anderson <jefferya@programmerq.net>[m
+[32m+[m[32m    Jeff Balogh <jbalogh@mozilla.com>[m
+[32m+[m[32m    Jeff Hui <jeffkhui@gmail.com>[m
+[32m+[m[32m    Jeffrey Gelens <jeffrey@gelens.org>[m
+[32m+[m[32m    Jeff Triplett <jeff.triplett@gmail.com>[m
+[32m+[m[32m    Jeffrey Yancey <jeffrey.yancey@gmail.com>[m
+[32m+[m[32m    Jens Diemer <django@htfx.de>[m
+[32m+[m[32m    Jens Page[m
+[32m+[m[32m    Jensen Cochran <jensen.cochran@gmail.com>[m
+[32m+[m[32m    Jeong-Min Lee <falsetru@gmail.com>[m
+[32m+[m[32m    Jérémie Blaser <blaserje@gmail.com>[m
+[32m+[m[32m    Jeremy Bowman <https://github.com/jmbowman>[m
+[32m+[m[32m    Jeremy Carbaugh <jcarbaugh@gmail.com>[m
+[32m+[m[32m    Jeremy Dunck <jdunck@gmail.com>[m
+[32m+[m[32m    Jeremy Lainé <jeremy.laine@m4x.org>[m
+[32m+[m[32m    Jerin Peter George <jerinpetergeorge@gmail.com>[m
+[32m+[m[32m    Jesse Young <adunar@gmail.com>[m
+[32m+[m[32m    Jezeniel Zapanta <jezeniel.zapanta@gmail.com>[m
+[32m+[m[32m    jhenry <jhenry@theonion.com>[m
+[32m+[m[32m    Jim Dalton <jim.dalton@gmail.com>[m
+[32m+[m[32m    Jimmy Song <jaejoon@gmail.com>[m
+[32m+[m[32m    Jiri Barton[m
+[32m+[m[32m    Joachim Jablon <ewjoachim@gmail.com>[m
+[32m+[m[32m    Joao Oliveira <joaoxsouls@gmail.com>[m
+[32m+[m[32m    Joao Pedro Silva <j.pedro004@gmail.com>[m
+[32m+[m[32m    Joe Heck <http://www.rhonabwy.com/wp/>[m
+[32m+[m[32m    Joe Jackson <joe@joejackson.me>[m
+[32m+[m[32m    Joel Bohman <mail@jbohman.com>[m
+[32m+[m[32m    Joel Heenan <joelh-django@planetjoel.com>[m
+[32m+[m[32m    Joel Watts <joel@joelwatts.com>[m
+[32m+[m[32m    Joe Topjian <http://joe.terrarum.net/geek/code/python/django/>[m
+[32m+[m[32m    Johan C. Stöver <johan@nilling.nl>[m
+[32m+[m[32m    Johann Queuniet <johann.queuniet@adh.naellia.eu>[m
+[32m+[m[32m    john@calixto.net[m
+[32m+[m[32m    John D'Agostino <john.dagostino@gmail.com>[m
+[32m+[m[32m    John D'Ambrosio <dambrosioj@gmail.com>[m
+[32m+[m[32m    John Huddleston <huddlej@wwu.edu>[m
+[32m+[m[32m    John Moses <moses.john.r@gmail.com>[m
+[32m+[m[32m    John Paulett <john@paulett.org>[m
+[32m+[m[32m    John Shaffer <jshaffer2112@gmail.com>[m
+[32m+[m[32m    Jökull Sólberg Auðunsson <jokullsolberg@gmail.com>[m
+[32m+[m[32m    Jon Dufresne <jon.dufresne@gmail.com>[m
+[32m+[m[32m    Jonas Haag <jonas@lophus.org>[m
+[32m+[m[32m    Jonas Lundberg <jonas.lundberg@gmail.com>[m
+[32m+[m[32m    Jonathan Davis <jonathandavis47780@gmail.com>[m
+[32m+[m[32m    Jonatas C. D. <jonatas.cd@gmail.com>[m
+[32m+[m[32m    Jonathan Buchanan <jonathan.buchanan@gmail.com>[m
+[32m+[m[32m    Jonathan Daugherty (cygnus) <http://www.cprogrammer.org/>[m
+[32m+[m[32m    Jonathan Feignberg <jdf@pobox.com>[m
+[32m+[m[32m    Jonathan Slenders[m
+[32m+[m[32m    Jonny Park <jonnythebard9@gmail.com>[m
+[32m+[m[32m    Jordan Bae <qoentlr37@gmail.com>[m
+[32m+[m[32m    Jordan Dimov <s3x3y1@gmail.com>[m
+[32m+[m[32m    Jordi J. Tablada <jordi.joan@gmail.com>[m
+[32m+[m[32m    Jorge Bastida <me@jorgebastida.com>[m
+[32m+[m[32m    Jorge Gajon <gajon@gajon.org>[m
+[32m+[m[32m    José Tomás Tocino García <josetomas.tocino@gmail.com>[m
+[32m+[m[32m    Josef Rousek <josef.rousek@gmail.com>[m
+[32m+[m[32m    Joseph Kocherhans <joseph@jkocherhans.com>[m
+[32m+[m[32m    Josh Smeaton <josh.smeaton@gmail.com>[m
+[32m+[m[32m    Joshua Cannon <joshdcannon@gmail.com>[m
+[32m+[m[32m    Joshua Ginsberg <jag@flowtheory.net>[m
+[32m+[m[32m    Jozko Skrablin <jozko.skrablin@gmail.com>[m
+[32m+[m[32m    J. Pablo Fernandez <pupeno@pupeno.com>[m
+[32m+[m[32m    jpellerin@gmail.com[m
+[32m+[m[32m    Juan Catalano <catalanojuan@gmail.com>[m
+[32m+[m[32m    Juan Manuel Caicedo <juan.manuel.caicedo@gmail.com>[m
+[32m+[m[32m    Juan Pedro Fisanotti <fisadev@gmail.com>[m
+[32m+[m[32m    Julia Elman[m
+[32m+[m[32m    Julia Matsieva <julia.matsieva@gmail.com>[m
+[32m+[m[32m    Julian Bez[m
+[32m+[m[32m    Julien Phalip <jphalip@gmail.com>[m
+[32m+[m[32m    Junyoung Choi <cupjoo@gmail.com>[m
+[32m+[m[32m    junzhang.jn@gmail.com[m
+[32m+[m[32m    Jure Cuhalev <gandalf@owca.info>[m
+[32m+[m[32m    Justin Bronn <jbronn@gmail.com>[m
+[32m+[m[32m    Justine Tunney <jtunney@gmail.com>[m
+[32m+[m[32m    Justin Lilly <justinlilly@gmail.com>[m
+[32m+[m[32m    Justin Michalicek <jmichalicek@gmail.com>[m
+[32m+[m[32m    Justin Myles Holmes <justin@slashrootcafe.com>[m
+[32m+[m[32m    Jyrki Pulliainen <jyrki.pulliainen@gmail.com>[m
+[32m+[m[32m    Kadesarin Sanjek[m
+[32m+[m[32m    Kapil Bansal <kapilbansal.gbpecdelhi@gmail.com>[m
+[32m+[m[32m    Karderio <karderio@gmail.com>[m
+[32m+[m[32m    Karen Tracey <kmtracey@gmail.com>[m
+[32m+[m[32m    Karol Sikora <elektrrrus@gmail.com>[m
+[32m+[m[32m    Katherine “Kati” Michel <kthrnmichel@gmail.com>[m
+[32m+[m[32m    Kathryn Killebrew <kathryn.killebrew@gmail.com>[m
+[32m+[m[32m    Katie Miller <katie@sub50.com>[m
+[32m+[m[32m    Keith Bussell <kbussell@gmail.com>[m
+[32m+[m[32m    Kenneth Love <kennethlove@gmail.com>[m
+[32m+[m[32m    Kent Hauser <kent@khauser.net>[m
+[32m+[m[32m    Keryn Knight <keryn@kerynknight.com>[m
+[32m+[m[32m    Kevin Grinberg <kevin@kevingrinberg.com>[m
+[32m+[m[32m    Kevin Kubasik <kevin@kubasik.net>[m
+[32m+[m[32m    Kevin McConnell <kevin.mcconnell@gmail.com>[m
+[32m+[m[32m    Kieran Holland <http://www.kieranholland.com>[m
+[32m+[m[32m    kilian <kilian.cavalotti@lip6.fr>[m
+[32m+[m[32m    Kim Joon Hwan 김준환 <xncbf12@gmail.com>[m
+[32m+[m[32m    Klaas van Schelven <klaas@vanschelven.com>[m
+[32m+[m[32m    knox <christobzr@gmail.com>[m
+[32m+[m[32m    konrad@gwu.edu[m
+[32m+[m[32m    Kowito Charoenratchatabhan <kowito@felspar.com>[m
+[32m+[m[32m    Krišjānis Vaiders <krisjanisvaiders@gmail.com>[m
+[32m+[m[32m    krzysiek.pawlik@silvermedia.pl[m
+[32m+[m[32m    Krzysztof Jagiello <me@kjagiello.com>[m
+[32m+[m[32m    Krzysztof Jurewicz <krzysztof.jurewicz@gmail.com>[m
+[32m+[m[32m    Krzysztof Kulewski <kulewski@gmail.com>[m
+[32m+[m[32m    kurtiss@meetro.com[m
+[32m+[m[32m    Lakin Wecker <lakin@structuredabstraction.com>[m
+[32m+[m[32m    Lars Yencken <lars.yencken@gmail.com>[m
+[32m+[m[32m    Lau Bech Lauritzen[m
+[32m+[m[32m    Laurent Luce <https://www.laurentluce.com/>[m
+[32m+[m[32m    Laurent Rahuel <laurent.rahuel@gmail.com>[m
+[32m+[m[32m    lcordier@point45.com[m
+[32m+[m[32m    Leah Culver <leah.culver@gmail.com>[m
+[32m+[m[32m    Leandra Finger <leandra.finger@gmail.com>[m
+[32m+[m[32m    Lee Reilly <lee@leereilly.net>[m
+[32m+[m[32m    Lee Sanghyuck <shlee322@elab.kr>[m
+[32m+[m[32m    Leo "hylje" Honkanen <sealage@gmail.com>[m
+[32m+[m[32m    Leo Shklovskii[m
+[32m+[m[32m    Leo Soto <leo.soto@gmail.com>[m
+[32m+[m[32m    lerouxb@gmail.com[m
+[32m+[m[32m    Lex Berezhny <lex@damoti.com>[m
+[32m+[m[32m    Liang Feng <hutuworm@gmail.com>[m
+[32m+[m[32m    limodou[m
+[32m+[m[32m    Lincoln Smith <lincoln.smith@anu.edu.au>[m
+[32m+[m[32m    Liu Yijie <007gzs@gmail.com>[m
+[32m+[m[32m    Loek van Gent <loek@barakken.nl>[m
+[32m+[m[32m    Loïc Bistuer <loic.bistuer@sixmedia.com>[m
+[32m+[m[32m    Lowe Thiderman <lowe.thiderman@gmail.com>[m
+[32m+[m[32m    Luan Pablo <luanpab@gmail.com>[m
+[32m+[m[32m    Lucas Connors <https://www.revolutiontech.ca/>[m
+[32m+[m[32m    Luciano Ramalho[m
+[32m+[m[32m    Lucidiot <lucidiot@brainshit.fr>[m
+[32m+[m[32m    Ludvig Ericson <ludvig.ericson@gmail.com>[m
+[32m+[m[32m    Luis C. Berrocal <luis.berrocal.1942@gmail.com>[m
+[32m+[m[32m    Łukasz Langa <lukasz@langa.pl>[m
+[32m+[m[32m    Łukasz Rekucki <lrekucki@gmail.com>[m
+[32m+[m[32m    Luke Granger-Brown <django@lukegb.com>[m
+[32m+[m[32m    Luke Plant <L.Plant.98@cantab.net>[m
+[32m+[m[32m    Maciej Fijalkowski[m
+[32m+[m[32m    Maciej Wiśniowski <pigletto@gmail.com>[m
+[32m+[m[32m    Mads Jensen <https://github.com/atombrella>[m
+[32m+[m[32m    Makoto Tsuyuki <mtsuyuki@gmail.com>[m
+[32m+[m[32m    Malcolm Tredinnick[m
+[32m+[m[32m    Manav Agarwal <dpsman13016@gmail.com>[m
+[32m+[m[32m    Manuel Saelices <msaelices@yaco.es>[m
+[32m+[m[32m    Manuzhai[m
+[32m+[m[32m    Marc Aymerich Gubern[m
+[32m+[m[32m    Marc Egli <frog32@me.com>[m
+[32m+[m[32m    Marcel Telka <marcel@telka.sk>[m
+[32m+[m[32m    Marcelo Galigniana <marcelogaligniana@gmail.com>[m
+[32m+[m[32m    Marc Fargas <telenieko@telenieko.com>[m
+[32m+[m[32m    Marc Garcia <marc.garcia@accopensys.com>[m
+[32m+[m[32m    Marcin Wróbel[m
+[32m+[m[32m    Marc Remolt <m.remolt@webmasters.de>[m
+[32m+[m[32m    Marc Seguí Coll <metarizard@gmail.com>[m
+[32m+[m[32m    Marc Tamlyn <marc.tamlyn@gmail.com>[m
+[32m+[m[32m    Marc-Aurèle Brothier <ma.brothier@gmail.com>[m
+[32m+[m[32m    Marian Andre <django@andre.sk>[m
+[32m+[m[32m    Marijn Vriens <marijn@metronomo.cl>[m
+[32m+[m[32m    Mario Gonzalez <gonzalemario@gmail.com>[m
+[32m+[m[32m    Mariusz Felisiak <felisiak.mariusz@gmail.com>[m
+[32m+[m[32m    Mark Biggers <biggers@utsl.com>[m
+[32m+[m[32m    Mark Gensler <mark.gensler@protonmail.com>[m
+[32m+[m[32m    mark@junklight.com[m
+[32m+[m[32m    Mark Lavin <markdlavin@gmail.com>[m
+[32m+[m[32m    Mark Sandstrom <mark@deliciouslynerdy.com>[m
+[32m+[m[32m    Markus Amalthea Magnuson <markus.magnuson@gmail.com>[m
+[32m+[m[32m    Markus Holtermann <https://markusholtermann.eu>[m
+[32m+[m[32m    Marten Kenbeek <marten.knbk+django@gmail.com>[m
+[32m+[m[32m    Marti Raudsepp <marti@juffo.org>[m
+[32m+[m[32m    martin.glueck@gmail.com[m
+[32m+[m[32m    Martin Green[m
+[32m+[m[32m    Martin Kosír <martin@martinkosir.net>[m
+[32m+[m[32m    Martin Mahner <https://www.mahner.org/>[m
+[32m+[m[32m    Martin Maney <http://www.chipy.org/Martin_Maney>[m
+[32m+[m[32m    Martin von Gagern <gagern@google.com>[m
+[32m+[m[32m    Mart Sõmermaa <https://github.com/mrts>[m
+[32m+[m[32m    Marty Alchin <gulopine@gamemusic.org>[m
+[32m+[m[32m    Masashi Shibata <m.shibata1020@gmail.com>[m
+[32m+[m[32m    masonsimon+django@gmail.com[m
+[32m+[m[32m    Massimiliano Ravelli <massimiliano.ravelli@gmail.com>[m
+[32m+[m[32m    Massimo Scamarcia <massimo.scamarcia@gmail.com>[m
+[32m+[m[32m    Mathieu Agopian <mathieu.agopian@gmail.com>[m
+[32m+[m[32m    Matías Bordese[m
+[32m+[m[32m    Matt Boersma <matt@sprout.org>[m
+[32m+[m[32m    Matt Croydon <http://www.postneo.com/>[m
+[32m+[m[32m    Matt Deacalion Stevens <matt@dirtymonkey.co.uk>[m
+[32m+[m[32m    Matt Dennenbaum[m
+[32m+[m[32m    Matthew Flanagan <https://wadofstuff.blogspot.com/>[m
+[32m+[m[32m    Matthew Schinckel <matt@schinckel.net>[m
+[32m+[m[32m    Matthew Somerville <matthew-django@dracos.co.uk>[m
+[32m+[m[32m    Matthew Tretter <m@tthewwithanm.com>[m
+[32m+[m[32m    Matthew Wilkes <matt@matthewwilkes.name>[m
+[32m+[m[32m    Matthias Kestenholz <mk@406.ch>[m
+[32m+[m[32m    Matthias Pronk <django@masida.nl>[m
+[32m+[m[32m    Matt Hoskins <skaffenuk@googlemail.com>[m
+[32m+[m[32m    Matt McClanahan <https://mmcc.cx/>[m
+[32m+[m[32m    Matt Riggott[m
+[32m+[m[32m    Matt Robenolt <m@robenolt.com>[m
+[32m+[m[32m    Mattia Larentis <mattia@laretis.eu>[m
+[32m+[m[32m    Mattia Procopio <promat85@gmail.com>[m
+[32m+[m[32m    Mattias Loverot <mattias@stubin.se>[m
+[32m+[m[32m    mattycakes@gmail.com[m
+[32m+[m[32m    Max Burstein <http://maxburstein.com>[m
+[32m+[m[32m    Max Derkachev <mderk@yandex.ru>[m
+[32m+[m[32m    Max Smolens <msmolens@gmail.com>[m
+[32m+[m[32m    Maxime Lorant <maxime.lorant@gmail.com>[m
+[32m+[m[32m    Maxime Turcotte <maxocub@riseup.net>[m
+[32m+[m[32m    Maximilian Merz <django@mxmerz.de>[m
+[32m+[m[32m    Maximillian Dornseif <md@hudora.de>[m
+[32m+[m[32m    mccutchen@gmail.com[m
+[32m+[m[32m    Meghana Bhange <meghanabhange13@gmail.com>[m
+[32m+[m[32m    Meir Kriheli <http://mksoft.co.il/>[m
+[32m+[m[32m    Michael S. Brown <michael@msbrown.net>[m
+[32m+[m[32m    Michael Hall <mhall1@ualberta.ca>[m
+[32m+[m[32m    Michael Josephson <http://www.sdjournal.com/>[m
+[32m+[m[32m    Michael Lissner <mike@free.law>[m
+[32m+[m[32m    Michael Manfre <mmanfre@gmail.com>[m
+[32m+[m[32m    michael.mcewan@gmail.com[m
+[32m+[m[32m    Michael Placentra II <someone@michaelplacentra2.net>[m
+[32m+[m[32m    Michael Radziej <mir@noris.de>[m
+[32m+[m[32m    Michael Sanders <m.r.sanders@gmail.com>[m
+[32m+[m[32m    Michael Schwarz <michi.schwarz@gmail.com>[m
+[32m+[m[32m    Michael Sinov <sihaelov@gmail.com>[m
+[32m+[m[32m    Michael Thornhill <michael.thornhill@gmail.com>[m
+[32m+[m[32m    Michal Chruszcz <troll@pld-linux.org>[m
+[32m+[m[32m    michal@plovarna.cz[m
+[32m+[m[32m    Michał Modzelewski <michal.modzelewski@gmail.com>[m
+[32m+[m[32m    Mihai Damian <yang_damian@yahoo.com>[m
+[32m+[m[32m    Mihai Preda <mihai_preda@yahoo.com>[m
+[32m+[m[32m    Mikaël Barbero <mikael.barbero nospam at nospam free.fr>[m
+[32m+[m[32m    Mike Axiak <axiak@mit.edu>[m
+[32m+[m[32m    Mike Grouchy <https://mikegrouchy.com/>[m
+[32m+[m[32m    Mike Malone <mjmalone@gmail.com>[m
+[32m+[m[32m    Mike Richardson[m
+[32m+[m[32m    Mike Wiacek <mjwiacek@google.com>[m
+[32m+[m[32m    Mikhail Korobov <kmike84@googlemail.com>[m
+[32m+[m[32m    Mikko Hellsing <mikko@sorl.net>[m
+[32m+[m[32m    Mikołaj Siedlarek <mikolaj.siedlarek@gmail.com>[m
+[32m+[m[32m    milkomeda[m
+[32m+[m[32m    Milton Waddams[m
+[32m+[m[32m    mitakummaa@gmail.com[m
+[32m+[m[32m    mmarshall[m
+[32m+[m[32m    Moayad Mardini <moayad.m@gmail.com>[m
+[32m+[m[32m    Morgan Aubert <morgan.aubert@zoho.com>[m
+[32m+[m[32m    Moritz Sichert <moritz.sichert@googlemail.com>[m
+[32m+[m[32m    Morten Bagai <m@bagai.com>[m
+[32m+[m[32m    msaelices <msaelices@gmail.com>[m
+[32m+[m[32m    msundstr[m
+[32m+[m[32m    Mushtaq Ali <mushtaak@gmail.com>[m
+[32m+[m[32m    Mykola Zamkovoi <nickzam@gmail.com>[m
+[32m+[m[32m    Nadège Michel <michel.nadege@gmail.com>[m
+[32m+[m[32m    Nagy Károly <charlie@rendszergazda.com>[m
+[32m+[m[32m    Nasimul Haque <nasim.haque@gmail.com>[m
+[32m+[m[32m    Nasir Hussain <nasirhjafri@gmail.com>[m
+[32m+[m[32m    Natalia Bidart <nataliabidart@gmail.com>[m
+[32m+[m[32m    Nate Bragg <jonathan.bragg@alum.rpi.edu>[m
+[32m+[m[32m    Nathan Gaberel <nathan@gnab.fr>[m
+[32m+[m[32m    Neal Norwitz <nnorwitz@google.com>[m
+[32m+[m[32m    Nebojša Dorđević[m
+[32m+[m[32m    Ned Batchelder <https://nedbatchelder.com/>[m
+[32m+[m[32m    Nena Kojadin <nena@kiberpipa.org>[m
+[32m+[m[32m    Niall Dalton <niall.dalton12@gmail.com>[m
+[32m+[m[32m    Niall Kelly <duke.sam.vimes@gmail.com>[m
+[32m+[m[32m    Nick Efford <nick@efford.org>[m
+[32m+[m[32m    Nick Lane <nick.lane.au@gmail.com>[m
+[32m+[m[32m    Nick Pope <nick@nickpope.me.uk>[m
+[32m+[m[32m    Nick Presta <nick@nickpresta.ca>[m
+[32m+[m[32m    Nick Sandford <nick.sandford@gmail.com>[m
+[32m+[m[32m    Nick Sarbicki <nick.a.sarbicki@gmail.com>[m
+[32m+[m[32m    Niclas Olofsson <n@niclasolofsson.se>[m
+[32m+[m[32m    Nicola Larosa <nico@teknico.net>[m
+[32m+[m[32m    Nicolas Lara <nicolaslara@gmail.com>[m
+[32m+[m[32m    Nicolas Noé <nicolas@niconoe.eu>[m
+[32m+[m[32m    Nikita Marchant <nikita.marchant@gmail.com>[m
+[32m+[m[32m    Niran Babalola <niran@niran.org>[m
+[32m+[m[32m    Nis Jørgensen <nis@superlativ.dk>[m
+[32m+[m[32m    Nowell Strite <https://nowell.strite.org/>[m
+[32m+[m[32m    Nuno Mariz <nmariz@gmail.com>[m
+[32m+[m[32m    Octavio Peri <octaperi@gmail.com>[m
+[32m+[m[32m    oggie rob <oz.robharvey@gmail.com>[m
+[32m+[m[32m    oggy <ognjen.maric@gmail.com>[m
+[32m+[m[32m    Oliver Beattie <oliver@obeattie.com>[m
+[32m+[m[32m    Oliver Rutherfurd <http://rutherfurd.net/>[m
+[32m+[m[32m    Olivier Sels <olivier.sels@gmail.com>[m
+[32m+[m[32m    Olivier Tabone <olivier.tabone@ripplemotion.fr>[m
+[32m+[m[32m    Orestis Markou <orestis@orestis.gr>[m
+[32m+[m[32m    Orne Brocaar <http://brocaar.com/>[m
+[32m+[m[32m    Oscar Ramirez <tuxskar@gmail.com>[m
+[32m+[m[32m    Ossama M. Khayat <okhayat@yahoo.com>[m
+[32m+[m[32m    Owen Griffiths[m
+[32m+[m[32m    Ömer Faruk Abacı <https://github.com/omerfarukabaci/>[m
+[32m+[m[32m    Pablo Martín <goinnn@gmail.com>[m
+[32m+[m[32m    Panos Laganakos <panos.laganakos@gmail.com>[m
+[32m+[m[32m    Paolo Melchiorre <paolo@melchiorre.org>[m
+[32m+[m[32m    Pascal Hartig <phartig@rdrei.net>[m
+[32m+[m[32m    Pascal Varet[m
+[32m+[m[32m    Patrik Sletmo <patrik.sletmo@gmail.com>[m
+[32m+[m[32m    Paul Bissex <http://e-scribe.com/>[m
+[32m+[m[32m    Paul Collier <paul@paul-collier.com>[m
+[32m+[m[32m    Paul Collins <paul.collins.iii@gmail.com>[m
+[32m+[m[32m    Paul Donohue <django@PaulSD.com>[m
+[32m+[m[32m    Paul Lanier <planier@google.com>[m
+[32m+[m[32m    Paul McLanahan <paul@mclanahan.net>[m
+[32m+[m[32m    Paul McMillan <Paul@McMillan.ws>[m
+[32m+[m[32m    Paulo Poiati <paulogpoiati@gmail.com>[m
+[32m+[m[32m    Paulo Scardine <paulo@scardine.com.br>[m
+[32m+[m[32m    Paul Smith <blinkylights23@gmail.com>[m
+[32m+[m[32m    Pavel Kulikov <kulikovpavel@gmail.com>[m
+[32m+[m[32m    pavithran s <pavithran.s@gmail.com>[m
+[32m+[m[32m    Pavlo Kapyshin <i@93z.org>[m
+[32m+[m[32m    permonik@mesias.brnonet.cz[m
+[32m+[m[32m    Petar Marić <http://www.petarmaric.com/>[m
+[32m+[m[32m    Pete Crosier <pete.crosier@gmail.com>[m
+[32m+[m[32m    peter@mymart.com[m
+[32m+[m[32m    Peter Sheats <sheats@gmail.com>[m
+[32m+[m[32m    Peter van Kampen[m
+[32m+[m[32m    Peter Zsoldos <http://zsoldosp.eu>[m
+[32m+[m[32m    Pete Shinners <pete@shinners.org>[m
+[32m+[m[32m    Petr Marhoun <petr.marhoun@gmail.com>[m
+[32m+[m[32m    Petter Strandmark[m
+[32m+[m[32m    pgross@thoughtworks.com[m
+[32m+[m[32m    phaedo <http://phaedo.cx/>[m
+[32m+[m[32m    phil.h.smith@gma
